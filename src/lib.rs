@@ -10,7 +10,7 @@ pub mod utils {
 
     /// Read input file for a given day
     pub fn read_input(day: &str, part: &str) -> Result<String, std::io::Error> {
-        let path = format!("inputs/{}_{}.txt", day, part);
+        let path = format!("inputs/{}{}.txt", day, part);
         println!("Reading input from: {}", path);
         fs::read_to_string(&path)
     }
