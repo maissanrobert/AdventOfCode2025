@@ -1,6 +1,6 @@
 /// Shared library for every days functions
 pub mod day01;
-//pub mod day02;
+pub mod day02;
 //pub mod day03;
 
 /// Common file and string functions used by most days
