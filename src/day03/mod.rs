@@ -78,7 +78,7 @@ fn part1(lines: &Vec<&str>) {
             }
         }
 
-        let line_joltage : u32;
+        let line_joltage: u32;
         if index_highest < index_second_highest {
             line_joltage = (highest * 10) + second_highest;
         } else {
@@ -133,8 +133,8 @@ fn part2(lines: &Vec<&str>) {
             selected = selected[..=index_lower].to_vec();
         }
         println!("Selected: {:?}", selected);
-        let mut local_joltage : u64 = 0;
-        let mut exponent : u32 = 12;
+        let mut local_joltage: u64 = 0;
+        let mut exponent: u32 = 12;
         for i in 0..selected.len() {
             exponent -= 1;
             local_joltage += selected[i] * (10 as u64).pow(exponent);

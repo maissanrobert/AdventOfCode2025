@@ -43,7 +43,7 @@ fn solve(input: &str, part: Option<u8>) {
 fn part1(lines: &Vec<&str>) {
     println!("Solving Part 1!");
 
-    let mut accessible_rolls : u32 = 0;
+    let mut accessible_rolls: u32 = 0;
     
     let row_count = lines.len();
     let col_count = lines[0].len();
@@ -55,7 +55,7 @@ fn part1(lines: &Vec<&str>) {
             }
 
             let neighbours = get_neighbours(row, col, row_count-1, col_count-1);
-            let mut neighbour_count : u32 = 0;
+            let mut neighbour_count: u32 = 0;
             
             //count how many neighbours are '@' sign
             for (row, col) in neighbours {
@@ -74,7 +74,7 @@ fn part1(lines: &Vec<&str>) {
 }
 
 fn get_neighbours(row: usize, col: usize, max_row: usize, max_col: usize) -> Vec<(usize,usize)> {
-    let mut neighbours : Vec<(usize,usize)> = Vec::new();
+    let mut neighbours: Vec<(usize,usize)> = Vec::new();
 
     //Get above neighbours
     if row > 0 {
@@ -114,7 +114,7 @@ fn part2(lines: &Vec<&str>) {
     println!("Solving Part 2!");
     
     //Convert to list of list of chars so we can replace chars later
-    let mut grid : Vec<Vec<char>> = Vec::new();
+    let mut grid: Vec<Vec<char>> = Vec::new();
     for line in lines {
         grid.push(line.chars().collect());
     }
@@ -126,14 +126,14 @@ fn part2(lines: &Vec<&str>) {
     let col_count = lines[0].len();
 
     //Convert to 2d array
-    let mut grid : Vec<Vec<char>> = Vec::new();
+    let mut grid: Vec<Vec<char>> = Vec::new();
     for line in lines {
         grid.push(line.chars().collect());
     }
 
     while accessible_rolls > 0 {
         accessible_rolls = 0;
-        let mut to_remove : Vec<(usize,usize)> = Vec::new();
+        let mut to_remove: Vec<(usize,usize)> = Vec::new();
 
         for row in 0..row_count {
             for col in 0..col_count {
@@ -142,7 +142,7 @@ fn part2(lines: &Vec<&str>) {
                 }
 
                 let neighbours = get_neighbours(row, col, row_count-1, col_count-1);
-                let mut neighbour_count : u32 = 0;
+                let mut neighbour_count: u32 = 0;
             
                 //count how many neighbours are '@' sign
                 for (row, col) in neighbours {
