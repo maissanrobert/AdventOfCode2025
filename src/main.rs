@@ -29,6 +29,8 @@ fn main() {
             ("2", day02::run as fn(Option<String>, Option<u8>)),
             ("day03", day03::run as fn(Option<String>, Option<u8>)),
             ("3", day03::run as fn(Option<String>, Option<u8>)),
+            ("day04", day04::run as fn(Option<String>, Option<u8>)),
+            ("4", day04::run as fn(Option<String>, Option<u8>)),
         ],
     );
 
